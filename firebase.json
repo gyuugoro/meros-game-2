@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "meros-game-2",
     "public": "dist",
     "ignore": [
       "firebase.json",
