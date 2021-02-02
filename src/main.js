@@ -3,7 +3,7 @@ import App from './App.vue'
 import store from './store'
 import router from './router'
 import vuetify from './plugins/vuetify';
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 
 const config = {
   apiKey: "AIzaSyBdvU9aJKzIxTTdizfOdHk46QjwSR0DzGg",
@@ -17,7 +17,7 @@ const config = {
 };
 
 firebase.initializeApp(config);
-firebase.analytics();
+
 
 Vue.config.productionTip = false
 

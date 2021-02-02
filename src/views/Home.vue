@@ -4,12 +4,14 @@
       <v-text-field
         label="あなたの名前"
         outlined
+        autofocus
         append-icon="mdi-account-check"
         :rules="[rule]"
         color="green"
         @click:append="start"
         @keypress.enter.prevent
         @keypress.enter="start"
+        v-model="name"
       ></v-text-field>
     </v-form>
   </v-container>
@@ -20,30 +22,34 @@ export default {
   computed: {
     name: {
       get() {
-        return this.$store.state.name
+        return this.$store.state.name;
       },
       set(v) {
-        this.$store.commit('changeName', v)
-      }
-    }
+        this.$store.commit("changeName", v);
+      },
+    },
   },
-  
+
+  created() {
+    this.name = "";
+  },
+
   methods: {
     start() {
-      if(this.$refs.textField.validate()) {
-        console.log('start')
+      if (this.$refs.textField.validate()) {
+        console.log("start");
+        this.$router.push("/answer");
       }
-    }
+    },
   },
 
   data() {
-    return{
-      rule:(v) => !!v || 'ちゃんと入力しろ！'
-    }
-  }
-}
+    return {
+      rule: (v) => !!v || "ちゃんと入力しろ！",
+    };
+  },
+};
 </script>
 
-<style>
-
+<style scoped>
 </style>
