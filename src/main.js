@@ -7,7 +7,7 @@ import firebase from 'firebase/app'
 
 const config = {
   apiKey: "秘密",
-  authDomain: "秘密,
+  authDomain: "秘密",
   databaseURL: "秘密",
   projectId: "秘密",
   storageBucket: "秘密",
