@@ -2,7 +2,7 @@
   <v-container class="mx-auto my-auto">
     <v-form ref="textField">
       <v-text-field
-        label="あなたの名前"
+        label="あなたのあだ名（例：しょーちゃん）"
         outlined
         autofocus
         append-icon="mdi-account-check"

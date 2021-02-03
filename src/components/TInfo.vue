@@ -1,8 +1,9 @@
 <template>
   <div class="base">
     <h1 class="main">情報</h1>
-    <p class="main" v-for="(text, i) in $store.state.infos" :key="i">
-      {{ text.name }} ・・・ {{ text.character }} <br />
+    <p class="main" v-for="text in $store.state.infos" :key="text.name">
+      {{ text.name }} ・・・ {{ text.character }} ・・・ {{ text.level }}
+      <br />
     </p>
   </div>
 </template>

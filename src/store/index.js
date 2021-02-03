@@ -28,7 +28,7 @@ export default new Vuex.Store({
       state.random = v
     },
     changeInfo(state, v) {
-      state.infos.unshift({ name: v.name, character: v.character })
+      state.infos.unshift({ name: v.name, character: v.character, level: v.level })
     },
     deleteInfo(state) {
       state.infos = []
@@ -55,7 +55,8 @@ export default new Vuex.Store({
     addInfo({ state }) {
       firebase.firestore().collection('meros-game-2').doc(state.name).set({
         name: state.name,
-        character: state.character
+        character: state.character,
+        level: state.level
       }).then(() => {
         console.log('追加成功-firebase')
       }).catch((err) => {

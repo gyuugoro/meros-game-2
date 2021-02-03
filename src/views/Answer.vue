@@ -1,11 +1,13 @@
 <template>
   <v-container fluid fill-height class="p-0" style="padding: 0px">
     <TImage />
-    <TText />
+    <TText v-show="isText" />
     <TInfo />
-    <v-btn color="green" dark fab bottom right elevation="0" fixed to="/"
-      ><v-icon>mdi-home</v-icon></v-btn
-    >
+    <v-fab-transition>
+      <v-btn color="green" dark fab bottom right elevation="0" fixed to="/"
+        ><v-icon>mdi-home</v-icon></v-btn
+      >
+    </v-fab-transition>
   </v-container>
 </template>
 
@@ -19,6 +21,16 @@ export default {
     TText,
     TImage,
     TInfo,
+  },
+  data() {
+    return {
+      isText: false,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isText = true;
+    }, 500);
   },
 };
 </script>
