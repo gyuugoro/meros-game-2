@@ -18,6 +18,24 @@
         >
       </template>
     </v-snackbar>
+
+    <v-fab-transition>
+      <v-btn
+        :color="$store.state.fab ? 'black' : 'green'"
+        elevation="0"
+        fixed
+        bottom
+        right
+        fab
+        dark
+        :key="$store.state.fab"
+        :to="$store.state.fab ? null : '/'"
+        :href="
+          $store.state.fab ? 'https://github.com/gyuugoro/meros-game-2' : null
+        "
+        ><v-icon>mdi-{{ $store.state.fab ? "github" : "home" }}</v-icon></v-btn
+      >
+    </v-fab-transition>
   </v-app>
 </template>
 

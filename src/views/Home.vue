@@ -32,6 +32,7 @@ export default {
 
   created() {
     this.name = "";
+    this.$store.commit("changeFab", true);
   },
 
   methods: {

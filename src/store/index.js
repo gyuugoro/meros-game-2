@@ -12,9 +12,15 @@ export default new Vuex.Store({
     infos: [],
     random: 1,
     command: false,
-    commandText: ''
+    commandText: '',
+
+    fab: true
   },
   mutations: {
+
+    changeFab(state, v) {
+      state.fab = v
+    },
     changeName(state, v) {
       state.name = v
     },

@@ -4,9 +4,9 @@
     <TText v-show="isText" />
     <TInfo />
     <v-fab-transition>
-      <v-btn color="green" dark fab bottom right elevation="0" fixed to="/"
+      <!-- <v-btn color="green" dark fab bottom right elevation="0" fixed to="/"
         ><v-icon>mdi-home</v-icon></v-btn
-      >
+      > -->
     </v-fab-transition>
   </v-container>
 </template>
@@ -31,6 +31,9 @@ export default {
     setTimeout(() => {
       this.isText = true;
     }, 500);
+  },
+  created() {
+    this.$store.commit("changeFab", false);
   },
 };
 </script>
