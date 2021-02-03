@@ -6,14 +6,14 @@ import vuetify from './plugins/vuetify';
 import firebase from 'firebase/app'
 
 const config = {
-  apiKey: "秘密",
-  authDomain: "秘密",
-  databaseURL: "秘密",
-  projectId: "秘密",
-  storageBucket: "秘密",
-  messagingSenderId: "秘密",
-  appId: "秘密",
-  measurementId: "秘密"
+  apiKey: "AIzaSyBdvU9aJKzIxTTdizfOdHk46QjwSR0DzGg",
+  authDomain: "palami-apps.firebaseapp.com",
+  databaseURL: "https://palami-apps.firebaseio.com",
+  projectId: "palami-apps",
+  storageBucket: "palami-apps.appspot.com",
+  messagingSenderId: "1000349405707",
+  appId: "1:1000349405707:web:5318ea7f45a0056f93ed0e",
+  measurementId: "G-1JY6C6RGSX"
 };
 
 firebase.initializeApp(config);
